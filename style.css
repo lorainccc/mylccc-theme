@@ -23,7 +23,7 @@ Section 6: Text
 a.button.radius{background-color:#217dbb;font-size:.8875em}.contain-to-grid{background:rgba(0,59,118,0.5)}
 .top-bar-section ul li:hover:not(.has-form)>a{background:#003b76}.top-bar-section li:not(.has-form) a:not(.button){background:#003b76}
 .contain-to-grid .top-bar{max-width:65.5rem;background:#003b76;border-left:1px inset #333;border-right:1px inset #333}
-/*!  Section 2 - Body Styles */body{font-family:'Droid Sans',sans-serif;background-color:#959595;background-image:url(images/Convocation.png)}
+/*!  Section 2 - Body Styles */body{font-family:'Open Sans',sans-serif;background:0;background-color:#959595;background-image:url(images/Convocation.png);height:auto}
 .nopadding{padding:0}.contentdiv{padding:10px;background-color:#fff}.homeblock{padding:0;background-color:#f2f2f2}
 .hbheader_date{padding:0}.hbheader_date h6{font-size:1rem;text-align:center;font-weight:bold}
 .homeblock_header{padding:0 0 10px 0;border-bottom:1px inset #CCC}.homeblock_content{padding-top:10px}
@@ -57,11 +57,11 @@ nav.menu-centered ul li.active a,nav.menu-centered ul li a:hover{background-colo
 .footer ul li:last-child{border-right:0}.lccc-footer-menu ul li{border-right:0}.footer ul li a{color:#fff}
 .lccc-footer-address p{padding-left:9px;color:#fff;font-size:1.05rem;margin-bottom:0}
 .footerrow{padding:0 5px}div.social-icons-footer div{border-right:0}div.social-icons-footer div i{font-size:44px;text-align:center;color:#fff}
-p{word-break:break-word;font-family:Lato,sans-serif}a{font-family:Lato,sans-serif}
-.top-bar-section ul li>a{font-family:Lato,sans-serif}h1,h2,h3,h4,h4,h5,h6,h7{font-family:PT Sans,sans-serif}
+p{word-break:break-word;font-family:Open Sans,sans-serif}a{font-family:Open Sans,sans-serif}
+.top-bar-section ul li>a{font-family:Open Sans,sans-serif}h1,h2,h3,h4,h4,h5,h6,h7{font-family:Raleway,serif}
 h3.footer-connect{color:#fff;text-align:center}.tag a h7{color:#fff}.midpoint-campus-center-news{background:#72db3a}
 .lccc-sports-and-recreation-news{background:#764f51}.campus-wide{background-color:#000}
-.students{background-color:#f78536}.faculty-student{background-color:#1d556f}.staff-student{background-color:#5c4b77}
+.students{background-color:#f78536}.faculty-staff{background-color:#1d556f}.staff-student{background-color:#5c4b77}
 .stocker-arts-center-news{background-color:#cd4439}.stocker-arts{background-color:#cd4439}
 .athletics{background-color:#764f51}.uncategorized{background-color:#003b76}.business{background-color:#999}
 .lccc-news{background-color:#620808}.lccc-student-news{background-color:#f78536}.tag.lccc-student-news a h7{color:#000}
@@ -71,7 +71,7 @@ h3.calendar-list-header{text-decoration:underline}h4.calendar-month-subheader{te
 h5.event-title{margin-top:-6px;font-size:1.7rem;font-weight:bold;color:#003b76;text-decoration:underline}
 p.event-time{font-size:1.2rem}.eventslist a h3.eventtitle{color:#008cba}.eventslist a{color:#008cba;text-decoration:underline}
 .tag{border-radius:4px;color:#fff;cursor:pointer;margin-right:5px;margin-bottom:5px;overflow:hidden;line-height:15px;padding:8px 8px 8px 8px;position:relative;vertical-align:middle;display:inline-block;zoom:1;transition:.14s linear;-webkit-backface-visibility:hidden;float:left;text-align:center;width:100%}
-.skip-link{display:none}body{font-family:Lato}table caption{font-size:22pt;margin:10px 0 20px 0;font-weight:700}
+.skip-link{display:none}table caption{font-size:22pt;margin:10px 0 20px 0;font-weight:700}
 table.calendar{width:100%;border:1px solid #000}td.day{width:14%;height:140px;border:1px solid #000;vertical-align:top;padding:.5625rem .325rem}
 td.day a{text-decoration:underline}td.day span.day-date{font-size:14pt;font-weight:700}
 th.header{background-color:#003972;color:#fff;font-size:14pt;padding:5px}.not-month{background-color:#a6c3df}

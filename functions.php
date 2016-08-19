@@ -47,7 +47,7 @@ function mylccc_theme_setup() {
 		'primary' => esc_html__( 'LCCC Primary', 'mylccc-theme' ),
 		'mylccc-primary' => esc_html__( 'MyLCCC Primary', 'mylccc-theme' ),
 			'mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc' ),
-		'footer-menu' => esc_html__( 'Footer Menu', 'mylccc-theme' ),
+		'mylccc-footer-menu' => esc_html__( 'MyLCCC Footer Menu', 'mylccc-theme' ),
 	) );
 
 	/*
@@ -117,9 +117,9 @@ add_action( 'widgets_init', 'mylccc_theme_widgets_init' );
  * Enqueue google fonts.
  */
 function add_google_fonts() {
-wp_enqueue_style( 'pt-sans-google-fonts', 'https://fonts.googleapis.com/css?family=PT+Sans:400,700', false );
+wp_enqueue_style( 'pt-sans-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,700', false );
 	
-wp_enqueue_style( 'lato-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic', false ); 	
+wp_enqueue_style( 'lato-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic', false ); 	
 	
 }
 
