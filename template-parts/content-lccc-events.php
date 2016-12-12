@@ -119,7 +119,6 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
         <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
         <p><?php echo 'Time: '.$starttime; ?></p>
           <p><?php echo 'Location: '.$location; ?></p>
-        <p><?php echo 'Cost: '.$cost; ?></p>
 	</header><!-- .entry-header -->
 	</div>
 <?php
@@ -141,7 +140,7 @@ if ( has_post_thumbnail() ) {
 	</div><!-- .entry-content -->
 </div>
 <?php }else{ ?>
-	<div class="entry-content">
+	<div class="small-12 medium-12 large-12 columns entry-content">
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
