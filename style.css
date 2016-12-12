@@ -59,23 +59,22 @@ nav.menu-centered ul li.active a,nav.menu-centered ul li a:hover{background-colo
 .footerrow{padding:0 5px}div.social-icons-footer div{border-right:0}div.social-icons-footer div i{font-size:44px;text-align:center;color:#fff}
 p{word-break:break-word;font-family:Open Sans,sans-serif}a{font-family:Open Sans,sans-serif}
 .top-bar-section ul li>a{font-family:Open Sans,sans-serif}h1,h2,h3,h4,h4,h5,h6,h7{font-family:Raleway,serif}
-h3.footer-connect{color:#fff;text-align:center}.tag a h7{color:#fff}.midpoint-campus-center-news{background:#72db3a}
-.lccc-sports-and-recreation-news{background:#764f51}.campus-wide{background-color:#000}
-.students{background-color:#f78536}.faculty-staff{background-color:#1d556f}.staff-student{background-color:#5c4b77}
-.stocker-arts-center-news{background-color:#cd4439}.stocker-arts{background-color:#cd4439}
-.athletics{background-color:#764f51}.uncategorized{background-color:#003b76}.business{background-color:#999}
-.lccc-news{background-color:#620808}.lccc-student-news{background-color:#f78536}.tag.lccc-student-news a h7{color:#000}
-.tag.midpoint-campus-center-news a h7{color:#000}.event-time{font-weight:bold}.event-title{margin-bottom:0}
-td.day a.datelink{color:#003b76;text-decoration:none}td.day a.datelink-currentday{color:#fff;text-decoration:none}
-h3.calendar-list-header{text-decoration:underline}h4.calendar-month-subheader{text-decoration:underline;text-align:center}
-h5.event-title{margin-top:-6px;font-size:1.7rem;font-weight:bold;color:#003b76;text-decoration:underline}
+h3.footer-connect{color:#fff;text-align:center}.columns.homeblock_content h3{font-size:1.7rem}
+.tag a h7{color:#fff}.lccc-home-page{background:#0055a5}.midpoint-campus-center-news{background:#72db3a}
+.getting-started{background:#2a8000}.lccc-sports-and-recreation-news{background:#764f51}
+.campus-wide{background-color:#000}.students{background-color:#f78536}.faculty-staff{background-color:#1d556f}
+.staff-student{background-color:#5c4b77}.stocker-arts-center-news{background-color:#cd4439}
+.stocker-arts{background-color:#cd4439}.athletics{background-color:#764f51}.uncategorized{background-color:#003b76}
+.business{background-color:#999}.lccc-news{background-color:#620808}.lccc-student-news{background-color:#f78536}
+.tag.lccc-student-news a h7{color:#000}.tag.midpoint-campus-center-news a h7{color:#000}
+.event-time{font-weight:bold}.event-title{margin-bottom:0}td.day a.datelink{color:#003b76;text-decoration:none}
+td.day a.datelink-currentday{color:#fff;text-decoration:none}h3.calendar-list-header{text-decoration:underline}
+h4.calendar-month-subheader{text-decoration:underline;text-align:center}h5.event-title{margin-top:-6px;font-size:1.7rem;font-weight:bold;color:#003b76;text-decoration:underline}
 p.event-time{font-size:1.2rem}.eventslist a h3.eventtitle{color:#008cba}.eventslist a{color:#008cba;text-decoration:underline}
-.tag{border-radius:4px;color:#fff;cursor:pointer;margin-right:5px;margin-bottom:5px;overflow:hidden;line-height:15px;padding:8px 8px 8px 8px;position:relative;vertical-align:middle;display:inline-block;zoom:1;-webkit-transition:.14s linear;transition:.14s linear;-webkit-backface-visibility:hidden;float:left;text-align:center;width:100%}
+.tag{border-radius:4px;color:#fff;cursor:pointer;margin-right:5px;margin-bottom:5px;overflow:hidden;line-height:15px;padding:8px 8px 8px 8px;position:relative;vertical-align:middle;display:inline-block;zoom:1;transition:.14s linear;-webkit-backface-visibility:hidden;float:left;text-align:center;width:100%}
 .skip-link{display:none}table caption{font-size:22pt;margin:10px 0 20px 0;font-weight:700}
 table.calendar{width:100%;border:1px solid #000}td.day{width:14%;height:140px;border:1px solid #000;vertical-align:top;padding:.5625rem .325rem}
 td.day a{text-decoration:underline}td.day span.day-date{font-size:14pt;font-weight:700}
 th.header{background-color:#003972;color:#fff;font-size:14pt;padding:5px}.not-month{background-color:#a6c3df}
 td.today{background-color:#0062c5;color:#fff}td.today a{color:#fff;text-decoration:underline}
 td.day span.today-date{font-size:16pt}.todayseventslist{padding:0;list-style:none;margin-bottom:0;margin-left:0}
-/*! Section 6 - Text  */
-.columns.homeblock_content h3{ font-size: 1.7rem;}
