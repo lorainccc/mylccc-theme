@@ -111,21 +111,28 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 	<div class="small-12 medium-2 large-2 columns">
 	<?php
 			echo '<div class="small-12 medium-12 large-12 columns event-date nopadding">';
+		if ($eventstartdate !=''){
    echo '<div class="small-12 medium-12 large-12 columns  calendar">';    
 								echo '<div class="event-calendar-icon">';
         echo '</div>';
 							echo '<p class="mylccc-month">'.$eventstartmonth.'</p>';
 							echo '<p class="mylccc-day">'.$eventstartday.'</p>';
 				echo '</div>';			
+			}
 		echo '</div>';	
 		?>
  </div>
 	<div class="small-12 medium-10 large-10 columns nopadding event-details">
 	<header class="entry-header">
-        <?php the_category( ', ' ); ?>
-        <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
-        <p><?php echo 'Time: '.$starttime; ?></p>
-								<?php if( $location != ''){ ?>
+        <?php the_category( ', ' ); 
+
+		if($eventstartdate != ''){?>
+   <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
+		<?php } 
+		if($starttime != ''){
+		?>
+			<p><?php echo 'Time: '.$starttime; ?></p>
+		<?php } if( $location != ''){ ?>
           <p><?php echo 'Location: '.$location; ?></p>
 								<?php } ?>
 	</header><!-- .entry-header -->
