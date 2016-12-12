@@ -90,37 +90,104 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 	<div class="small-12 medium-8 large-8 columns nopadding">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<?php
-		if ( have_posts() ) : ?>
-
 			<header class="page-header">
 				<h1 class="page-title"> Events</h1>
 				<?php
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
+			<div class="small-12 medium-12 large-12 columns">
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'archive' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
+					//Defining variables for endpoints
+						$lcccevents = '';
+						$stockerevents = '';
+						$athleticevents = '';
+						
+					//defining the domain variable
+				 //	$domain = 'http://' . $_SERVER['SERVER_NAME'];
+							$domain = 'http://www.lorainccc.edu';
+					//Defining the endpoints
+							$lcccevents = new Endpoint( $domain . '/mylccc/wp-json/wp/v2/lccc_events' );
+							$athleticevents = new Endpoint( $domain . '/athletics/wp-json/wp/v2/lccc_events' );
+							$stockerevents = new Endpoint( 'http://sites.lorainccc.edu/stocker/wp-json/wp/v2/lccc_events' );
+						
+						//Create instance
+							$multi = new MultiBlog( 1 );
+				
+						//Adding endpoints to multi array
+							$multi->add_endpoint ( $lcccevents );
+							$multi->add_endpoint ( $athleticevents );
+							$multi->add_endpoint ( $stockerevents );
+							
+						//Fetch Posts from Endpoints
+							$posts = $multi->get_posts();
+						
+						//Test to see if any events exist 
+							if(empty($posts)){
+									echo 'No Posts Found!';
+							}
+						  
+							$icounter = 1;
+   				$currentdate = date("Y-m-d");
+							$currentday = date("d");
+							$currentmonth = date("m");
+							$currentmonthname = date("M");
+				
+						//$posts will be an array of all posts sorted by post date
+							foreach ( $posts as $post ){
+								?>
+								<article class="small-12 medium-12 large-12 columns" id="post-<?php echo $post->id->rendered; ?>" >
+										<header class="entry-header">
+												<a href="<?php echo $post->link; ?>">
+													<?php echo '<h1 class="entry-title">'.$post->title->rendered.'</h1>'; ?>
+											</a>
+										</header><!-- .entry-header -->
+									<?php
+									echo '<div class="small-12 medium-12 large-12 columns nopadding">';
+   									
+									echo '</div>';	
+								?>
+										<div class="small-12 medium-12 large-12 columns entry-content nopadding">
+												<?php
+														//set the variable to see if a featured image exists
+														$featured = $post->featured_media;
+												
+														//Test to see if image exists. If the vaule is equal zero then no image exists
+														if($featured != 0){
+																echo '<div class="small-12 medium-3 large-3 columns nopadding">';
+																	echo '<img src="'.$post->better_featured_image->media_details->sizes->medium->source_url.'" alt="'.$post->better_featured_image->alt_text.'">';
+																echo '</div>';
+															echo '<div class="small-12 medium-9 large-9 columns">';
+												echo '<div class="small-12 medium-12 large-12 columns event-details">';
+															$eventdate = $post->event_start_date;
+															$newDate = date("F m, Y", strtotime($eventdate));
+															echo '<p>'.'Date: '.$newDate.'</p>';
+																echo '<p>'.'Time: '.$post->event_start_time.'</p>';	
+															$location = $post->event_location;
+															if ( $location != ''){
+																echo '<p>Location: '.$location.'</p>';
+															}
+													echo '</div>';
+													echo '<div class="small-12 medium-12 large-12 columns">';
+														echo '<p>' . $post->excerpt->rendered . '</p>' ;
+														echo '<a class="button" href="'.$post->link.'">More Information</a>';
+													echo '</div>';
+															echo '</div>';
+														}else{
+															echo '<div class="small-12 medium-12 large-12 columns">';
+															echo ' <p>' . $post->excerpt->rendered . '</p>' ; 	
+															echo '</div>';	
+														}
+												?>
+										</div>
+										<div class="column row">
+												<hr>
+										</div>
+									</article>
+									<?php
+							}
+				?>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	</div>
