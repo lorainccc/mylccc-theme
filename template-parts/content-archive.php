@@ -133,8 +133,6 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 						echo '<div class="small-12 medium-12 large-12 columns">';
 									the_content();
 						echo '</div>';
-			the_content();
-
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mylccc-theme' ),
 				'after'  => '</div>',
