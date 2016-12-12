@@ -20,13 +20,42 @@
     the_post_thumbnail();
 			echo '</div>';
 			echo '<div class="small-12 medium-8 large-8 columns">';
-				the_content();
+			?>
+			<div class="small-12 medium-12 large-12 columns nopadding event-details">
+						<header class="entry-header">
+													<?php the_category( ', ' ); ?>
+													<p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
+													<p><?php echo 'Time: '.$starttime; ?></p>
+													<?php if( $location != ''){ ?>
+															<p><?php echo 'Location: '.$location; ?></p>
+													<?php } ?>
+						</header><!-- .entry-header -->
+		</div>
+		<?php
+						echo '<div class="small-12 medium-12 large-12 columns">';
+									the_content();
+						echo '</div>';
 			echo '</div>';
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mylccc-theme' ),
 				'after'  => '</div>',
 			) );
 }else{
+			?>
+		<div class="small-12 medium-12 large-12 columns nopadding event-details">
+						<header class="entry-header">
+													<?php the_category( ', ' ); ?>
+													<p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
+													<p><?php echo 'Time: '.$starttime; ?></p>
+													<?php if( $location != ''){ ?>
+															<p><?php echo 'Location: '.$location; ?></p>
+													<?php } ?>
+						</header><!-- .entry-header -->
+		</div>
+		<?php
+						echo '<div class="small-12 medium-12 large-12 columns">';
+									the_content();
+						echo '</div>';
 			the_content();
 
 			wp_link_pages( array(
