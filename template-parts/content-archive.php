@@ -130,7 +130,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 						</header><!-- .entry-header -->
 		</div>
 		<?php
-						echo '<div class="small-12 medium-12 large-12 columns">';
+						echo '<div class="small-12 medium-12 large-12 columns nopadding">';
 									the_content();
 						echo '</div>';
 			wp_link_pages( array(
