@@ -22,7 +22,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-<a class="button" href="/mylccc/lccc_events">Back to All Events</a>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	</div>
