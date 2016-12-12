@@ -135,6 +135,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 				
 						//$posts will be an array of all posts sorted by post date
 							foreach ( $posts as $post ){
+								  if( $post->event_end_date > $currentdate ){
 								?>
 								<article class="small-12 medium-12 large-12 columns" id="post-<?php echo $post->id->rendered; ?>" >
 										<header class="entry-header">
@@ -204,6 +205,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 										</div>
 									</article>
 									<?php
+										}
 							}
 				?>
 			</div>
