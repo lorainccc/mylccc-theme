@@ -25,17 +25,19 @@ a.button.radius{background-color:#217dbb;font-size:.8875em}.contain-to-grid{back
 .contain-to-grid .top-bar{max-width:65.5rem;background:#003b76;border-left:1px inset #333;border-right:1px inset #333}
 /*!  Section 2 - Body Styles */body{font-family:'Open Sans',sans-serif;background:0;background-color:#959595;background-image:url(images/Convocation.png);height:auto}
 .nopadding{padding:0}.contentdiv{padding:10px;background-color:#fff}.homeblock{padding:0;background-color:#f2f2f2}
-.hbheader_date{padding:0}.hbheader_date h6{font-size:1rem;text-align:center;font-weight:bold}
-.homeblock_header{padding:0 0 10px 0;border-bottom:1px inset #CCC}.homeblock_content{padding-top:10px}
-.hbheader_category{margin-top:-10px;padding:0}.hbheader_category a{float:left;text-align:center;color:#fff}
-.hbimage{padding:0}.main{padding:0;border-right:1px solid #003b76;border-left:1px solid #003b76}
+.hbheader_date{padding:0}div.column.row hr{margin:-80px auto 40px;height:50px;padding:3rem 0;width:100%}
+article div.column.row hr{margin:-80px auto 40px;height:50px;padding:1rem 0 0 0;width:100%}
+hr{max-width:75rem;border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 15px -15px #dcdcdc;margin:-50px auto 10px;clear:both}
+.hbheader_date h6{font-size:1rem;text-align:center;font-weight:bold}.homeblock_header{padding:0 0 10px 0;border-bottom:1px inset #CCC}
+.homeblock_content{padding-top:10px}.hbheader_category{margin-top:-10px;padding:0}
+.hbheader_category a{float:left;text-align:center;color:#fff}.hbimage{padding:0}.main{padding:0;border-right:1px solid #003b76;border-left:1px solid #003b76}
 .hbimage{padding-top:10px}ul.calendarlist li{list-style:none;background:#a6c7c7;margin-bottom:5px;min-height:60px;padding:3px}
 .clanedardayseventslist li{list-style:none}span.today-date a{color:#000;font-weight:bold;font-size:1.4rem;font-style:italic}
 span.calendar-today a{color:#000;font-weight:bold;font-size:1.4rem;font-style:italic}
 span.day-date a{color:#000;font-size:1.2rem}span.today-date,span.day-date{background:#fff}
 .daycontainer{background:#fff;min-height:60px;padding:2px 7px 10px 7px}ul.todayseventslist li{border-bottom:2px solid #eee;background:#fff;min-height:60px;display:inline-block}
 ul.todayseventslist li:last-child{border-bottom:0}div.todays-event{border-bottom:2px solid #eee}
-div.todays-event:last-child{border-bottom:0}header.page-header{border-bottom:1px inset #333}
+div.todays-event:last-child{border-bottom:0}header.page-header{border-bottom:1px inset #333;margin-bottom:2rem}
 div.archive-eventcontainer{border-bottom:1px solid #ccc;margin:5px 0}div.archive-eventcontainer:last-child{border-bottom:0}
 p.month{margin-bottom:0;margin-top:12px;margin-left:4px;width:100%;font-weight:bold;color:#003b76;line-height:1.7;font-size:.97rem}
 p.day{margin-bottom:0;margin-top:-10px;margin-left:9px;font-weight:bold;color:#003b76}
@@ -71,10 +73,11 @@ h3.footer-connect{color:#fff;text-align:center}.columns.homeblock_content h3{fon
 td.day a.datelink-currentday{color:#fff;text-decoration:none}h3.calendar-list-header{text-decoration:underline}
 h4.calendar-month-subheader{text-decoration:underline;text-align:center}h5.event-title{margin-top:-6px;font-size:1.7rem;font-weight:bold;color:#003b76;text-decoration:underline}
 p.event-time{font-size:1.2rem}.eventslist a h3.eventtitle{color:#008cba}.eventslist a{color:#008cba;text-decoration:underline}
-.tag{border-radius:4px;color:#fff;cursor:pointer;margin-right:5px;margin-bottom:5px;overflow:hidden;line-height:15px;padding:8px 8px 8px 8px;position:relative;vertical-align:middle;display:inline-block;zoom:1;transition:.14s linear;-webkit-backface-visibility:hidden;float:left;text-align:center;width:100%}
+h1.entry-title{line-height:110%;margin-top:.25rem;font-size:1.625rem}.tag{border-radius:4px;color:#fff;cursor:pointer;margin-right:5px;margin-bottom:5px;overflow:hidden;line-height:15px;padding:8px 8px 8px 8px;position:relative;vertical-align:middle;display:inline-block;zoom:1;transition:.14s linear;-webkit-backface-visibility:hidden;float:left;text-align:center;width:100%}
 .skip-link{display:none}table caption{font-size:22pt;margin:10px 0 20px 0;font-weight:700}
 table.calendar{width:100%;border:1px solid #000}td.day{width:14%;height:140px;border:1px solid #000;vertical-align:top;padding:.5625rem .325rem}
 td.day a{text-decoration:underline}td.day span.day-date{font-size:14pt;font-weight:700}
 th.header{background-color:#003972;color:#fff;font-size:14pt;padding:5px}.not-month{background-color:#a6c3df}
 td.today{background-color:#0062c5;color:#fff}td.today a{color:#fff;text-decoration:underline}
 td.day span.today-date{font-size:16pt}.todayseventslist{padding:0;list-style:none;margin-bottom:0;margin-left:0}
+.nopadding{padding:0}
