@@ -82,6 +82,7 @@
 		}
 $location = event_meta_box_get_meta('event_meta_box_event_location');  
 $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
+	$eventsubheading = event_meta_box_get_meta('event_meta_box_sub_heading');
 ?>
 <article id="post-<?php the_ID(); ?>">
 	<div class="small-12 medium-12 large-12 columns">
@@ -92,6 +93,12 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 			} else {
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
+					if( $eventsubheading != ''){
+						?>
+						<h4 class="event-sub-heading"><?php echo $eventsubheading;?> </h4>
+					<?php
+					}
+				
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php mylccc_theme_posted_on(); ?>
@@ -118,7 +125,9 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
         <?php the_category( ', ' ); ?>
         <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
         <p><?php echo 'Time: '.$starttime; ?></p>
+								<?php if( $location != ''){ ?>
           <p><?php echo 'Location: '.$location; ?></p>
+								<?php } ?>
 	</header><!-- .entry-header -->
 	</div>
 <?php
