@@ -86,7 +86,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 	$eventsubheading = event_meta_box_get_meta('event_meta_box_sub_heading');
 
 ?>
-<article id="post-<?php the_ID(); ?>" >
+<article class="small-12 medium-12 large-12 columns" id="post-<?php the_ID(); ?>" >
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
