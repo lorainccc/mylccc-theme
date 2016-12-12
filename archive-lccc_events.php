@@ -194,6 +194,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 													echo '</div>';
 															echo '<div class="small-12 medium-12 large-12 columns">';
 															echo ' <p>' . $post->excerpt->rendered . '</p>' ; 	
+																echo '<a class="button" href="'.$post->link.'">More Information</a>';
 															echo '</div>';	
 														}
 												?>
