@@ -28,7 +28,7 @@
 			<?php
 			$url = home_url();
 			?>
-			<a href="<?php echo esc_url( $url ); ?>">
+			<a href="/">
 			<img src="<?php echo get_bloginfo('stylesheet_directory');?>/images/MyLCCC-Logo.png" alt="MyLCCC Logo">
 			</a>
 			</div><!-- .site-branding -->
