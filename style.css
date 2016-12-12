@@ -73,7 +73,9 @@ h3.footer-connect{color:#fff;text-align:center}.columns.homeblock_content h3{fon
 td.day a.datelink-currentday{color:#fff;text-decoration:none}h3.calendar-list-header{text-decoration:underline}
 h4.calendar-month-subheader{text-decoration:underline;text-align:center}h5.event-title{margin-top:-6px;font-size:1.7rem;font-weight:bold;color:#003b76;text-decoration:underline}
 p.event-time{font-size:1.2rem}.eventslist a h3.eventtitle{color:#008cba}.eventslist a{color:#008cba;text-decoration:underline}
-h1.entry-title{line-height:110%;margin-top:.25rem;font-size:1.625rem}.tag{border-radius:4px;color:#fff;cursor:pointer;margin-right:5px;margin-bottom:5px;overflow:hidden;line-height:15px;padding:8px 8px 8px 8px;position:relative;vertical-align:middle;display:inline-block;zoom:1;transition:.14s linear;-webkit-backface-visibility:hidden;float:left;text-align:center;width:100%}
+h1.entry-title{line-height:110%;margin-top:.25rem;font-size:1.625rem}p.mylccc-month{color:#0c3b78;display:block;line-height:100%;text-transform:uppercase;font-weight:700;font-size:1.4rem;margin-top:-0.5rem}
+p.mylccc-day{margin-top:-0.9rem;text-align:center;color:#0c3b78;display:block;line-height:100%;text-transform:uppercase;font-weight:700;font-size:1.75rem}
+.tag{border-radius:4px;color:#fff;cursor:pointer;margin-right:5px;margin-bottom:5px;overflow:hidden;line-height:15px;padding:8px 8px 8px 8px;position:relative;vertical-align:middle;display:inline-block;zoom:1;transition:.14s linear;-webkit-backface-visibility:hidden;float:left;text-align:center;width:100%}
 .skip-link{display:none}table caption{font-size:22pt;margin:10px 0 20px 0;font-weight:700}
 table.calendar{width:100%;border:1px solid #000}td.day{width:14%;height:140px;border:1px solid #000;vertical-align:top;padding:.5625rem .325rem}
 td.day a{text-decoration:underline}td.day span.day-date{font-size:14pt;font-weight:700}
