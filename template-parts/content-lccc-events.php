@@ -103,7 +103,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 </div>
 	<div class="small-12 medium-2 large-2 columns">
 	<?php
-			echo '<div class="small-12 medium-12 large-12 columns event-date">';
+			echo '<div class="small-12 medium-12 large-12 columns event-date nopadding">';
    echo '<div class="small-12 medium-12 large-12 columns  calendar">';    
 								echo '<div class="event-calendar-icon">';
         echo '</div>';
@@ -113,7 +113,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 		echo '</div>';	
 		?>
  </div>
-	<div class="small-12 medium-10 large-10 columns nopadding">
+	<div class="small-12 medium-10 large-10 columns nopadding event-details">
 	<header class="entry-header">
         <?php the_category( ', ' ); ?>
         <p><?php echo 'Date: '.$eventstartmonthfull.', '.$eventstartday.' '.$eventstartyear; ?></p>
