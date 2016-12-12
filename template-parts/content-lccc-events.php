@@ -111,7 +111,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 	<div class="small-12 medium-2 large-2 columns">
 	<?php
 			echo '<div class="small-12 medium-12 large-12 columns event-date nopadding">';
-		if ($eventstartdate !=''){
+		if ($eventstartmonth != '' && $eventstartday != ''){
    echo '<div class="small-12 medium-12 large-12 columns  calendar">';    
 								echo '<div class="event-calendar-icon">';
         echo '</div>';
