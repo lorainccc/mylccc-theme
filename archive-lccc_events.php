@@ -160,9 +160,13 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 															echo '<div class="small-12 medium-9 large-9 columns">';
 												echo '<div class="small-12 medium-12 large-12 columns event-details">';
 															$eventdate = $post->event_start_date;
-															$newDate = date("F m, Y", strtotime($eventdate));
+															if($eventdate !=''){
+															$newDate = date("F j, Y", strtotime($eventdate));
 															echo '<p>'.'Date: '.$newDate.'</p>';
-																echo '<p>'.'Time: '.$post->event_start_time.'</p>';	
+															}
+															if($post->event_start_time !=''){
+															echo '<p>'.'Time: '.$post->event_start_time.'</p>';	
+															}
 															$location = $post->event_location;
 															if ( $location != ''){
 																echo '<p>Location: '.$location.'</p>';
@@ -174,6 +178,20 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 													echo '</div>';
 															echo '</div>';
 														}else{
+															echo '<div class="small-12 medium-12 large-12 columns event-details">';
+															$eventdate = $post->event_start_date;
+																	if($eventdate !=''){
+															$newDate = date("F j, Y", strtotime($eventdate));
+															echo '<p>'.'Date: '.$newDate.'</p>';
+															}
+															if($post->event_start_time !=''){
+															echo '<p>'.'Time: '.$post->event_start_time.'</p>';	
+															}
+															$location = $post->event_location;
+															if ( $location != ''){
+																echo '<p>Location: '.$location.'</p>';
+															}
+													echo '</div>';
 															echo '<div class="small-12 medium-12 large-12 columns">';
 															echo ' <p>' . $post->excerpt->rendered . '</p>' ; 	
 															echo '</div>';	
