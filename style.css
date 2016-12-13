@@ -26,7 +26,7 @@ a.button.radius{background-color:#217dbb;font-size:.8875em}.contain-to-grid{back
 /*!  Section 2 - Body Styles */body{font-family:'Open Sans',sans-serif;background:0;background-color:#959595;background-image:url(images/Convocation.png);height:auto}
 .nopadding{padding:0}.contentdiv{padding:10px;background-color:#fff}.homeblock{padding:0;background-color:#f2f2f2}
 .hbheader_date{padding:0}div.column.row hr{margin:-80px auto 40px;height:50px;padding:3rem 0;width:100%}
-article div.column.row hr{margin:-80px auto 40px;height:50px;padding:4rem 0 0 0;width:100%}
+article div.column.row hr{margin:-80px auto 40px;height:50px;padding:1rem 0 0 0;width:100%}
 hr{max-width:75rem;border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 15px -15px #dcdcdc;margin:-50px auto 10px;clear:both}
 .hbheader_date h6{font-size:1rem;text-align:center;font-weight:bold}.homeblock_header{padding:0 0 10px 0;border-bottom:1px inset #CCC}
 .homeblock_content{padding-top:10px}.hbheader_category{margin-top:-10px;padding:0}
