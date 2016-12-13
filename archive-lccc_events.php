@@ -107,9 +107,9 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 				 //	$domain = 'http://' . $_SERVER['SERVER_NAME'];
 							$domain = 'http://www.lorainccc.edu';
 					//Defining the endpoints
-							$lcccevents = new Endpoint( $domain . '/mylccc/wp-json/wp/v2/lccc_events' );
-							$athleticevents = new Endpoint( $domain . '/athletics/wp-json/wp/v2/lccc_events' );
-							$stockerevents = new Endpoint( 'http://sites.lorainccc.edu/stocker/wp-json/wp/v2/lccc_events' );
+							$lcccevents = new Endpoint( $domain . '/mylccc/wp-json/wp/v2/lccc_events?filter[posts_per_page]=-1' );
+							$athleticevents = new Endpoint( $domain . '/athletics/wp-json/wp/v2/lccc_events?filter[posts_per_page]=-1' );
+							$stockerevents = new Endpoint( 'http://sites.lorainccc.edu/stocker/wp-json/wp/v2/lccc_events?filter[posts_per_page]=-1' );
 						
 						//Create instance
 							$multi = new MultiBlog( 1 );
