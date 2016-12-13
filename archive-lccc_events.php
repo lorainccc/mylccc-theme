@@ -121,13 +121,16 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 							
 						//Fetch Posts from Endpoints
 							$posts = $multi->get_posts();
-						
+						 $count = count($posts);
+							echo $count;
 						//Test to see if any events exist 
 							if(empty($posts)){
 									echo 'No Posts Found!';
 							}
-						  
-							$icounter = 1;
+							$icounter = 0;
+							$pagecounter = 1;
+							
+							$posts_per_page = 10;
    				$currentdate = date("Y-m-d");
 							$currentday = date("d");
 							$currentmonth = date("m");
@@ -136,12 +139,23 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 usort( $posts, function ( $a, $b) {
 return strtotime( $a->event_start_date ) - strtotime( $b->event_start_date );
 });
-				
+				$eventcounter = 0;
+				$firstactive = '';
+				foreach ( $posts as $post ){
+							if( $post->event_end_date > $currentdate ){
+										$firstactive = $eventcounter;
+										break;
+							}
+							$eventcounter++;
+				}
+				echo $firstactive;
 						//$posts will be an array of all posts sorted by post date
 							foreach ( $posts as $post ){
 								  if( $post->event_end_date > $currentdate ){
+													if(	$icounter<$posts_per_page){
 								?>
 								<article class="small-12 medium-12 large-12 columns" id="post-<?php echo $post->id->rendered; ?>" >
+									<?php 	echo $icounter; ?>
 										<header class="entry-header">
 												<a href="<?php echo $post->link; ?>">
 													<?php echo '<h1 class="entry-title">'.$post->title->rendered.'</h1>'; ?>
@@ -209,8 +223,19 @@ return strtotime( $a->event_start_date ) - strtotime( $b->event_start_date );
 										</div>
 									</article>
 									<?php
+											$icounter ++;			
 										}
+									
+								}
+								
 							}
+							$pagecount = ceil($count/$posts_per_page);
+							
+							echo '<div class="small-12 medium-12 large-12 columns nopadding event-pagination">';
+										for($pagecounter=1;$pagecounter < $pagecount;$pagecounter++){
+													echo '<a class="button">'.$pagecounter.'</a>';
+										}
+							echo '</div>';
 				?>
 			</div>
 		</main><!-- #main -->
