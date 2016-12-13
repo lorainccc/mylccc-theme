@@ -132,6 +132,10 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 							$currentday = date("d");
 							$currentmonth = date("m");
 							$currentmonthname = date("M");
+
+usort( $posts, function ( $a, $b) {
+return strtotime( $a->event_start_date ) - strtotime( $b->event_start_date );
+});
 				
 						//$posts will be an array of all posts sorted by post date
 							foreach ( $posts as $post ){
