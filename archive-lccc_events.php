@@ -148,22 +148,14 @@ return strtotime( $a->event_start_date ) - strtotime( $b->event_start_date );
 							}
 							$eventcounter++;
 				}
-                
-                echo 'Total Number of Posts '.$count.'<br />';
-                $ttlActive = $count - $firstactive;
-                echo 'Number of Active Posts '.$ttlActive.'<br />';
-                
+                  
                 //See if there is a vriable page in the URL is set or exists
                 if (isset($_GET['page'])) {
                     $currentpage = $_GET['page']; 
                     $advamount = $_GET['page'] * $posts_per_page;
                     $activepost = $firstactive + $advamount - $posts_per_page;
-                    echo 'Current Page '.$_GET['page'].'<br />';
-                    echo 'First Post '.$activepost.'<br />';
                 }else{
                     $currentpage = 1;
-                    echo 'Current Page '.$currentpage.'<br />';  
-                    echo 'First Post '.$firstactive.'<br />';
                 }
                 
                 //Defining Posts array starting point based on current page
