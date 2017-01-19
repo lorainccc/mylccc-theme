@@ -47,7 +47,7 @@ $dateArray = array();
 
 ?>
 <?php 	$lastdate =  $year.'-'.$month.'-'.$day; ?>
-			<a href='/calendar/?d=<?php echo $lastdate;?>'><-- Back To The Calendar</a><br />	
+			<a href='calendar/?d=<?php echo $lastdate;?>'><-- Back To The Calendar</a><br />	
 <ul class="small-block-grid-1 small-block-grid-3 large-block-grid-3">		
 						<li>
 							<?php

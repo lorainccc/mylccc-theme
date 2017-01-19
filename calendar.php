@@ -19,6 +19,7 @@ get_header();
 						?>
 					<div class="small-12 medium-12 large-12 columns">
 <?php
+						
 $myvar = get_query_var('d');
    //parse_str($_SERVER['QUERY_STRING']);  
  if($myvar != ''){
@@ -42,7 +43,7 @@ $dateArray = array();
 						<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">
 <li><?php do_action( 'lccc_previous_month',$month, $year, $monthString); ?></li>
 <?php 	$lastdate =  $year.'-'.$month.'-'.$day; ?>							
-<li style="text-align: center;"><a href="/week/?d=<?php echo $lastdate;?>">Weekly View</a></li>
+<li style="text-align: center;"><a href="week/?d=<?php echo $lastdate;?>">Weekly View</a></li>
 	<li><?php do_action( 'lccc_next_month',$month, $year, $monthString); ?>
  </li>
 </ul>	
