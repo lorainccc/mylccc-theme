@@ -100,4 +100,4 @@
 	</header><!-- #masthead -->
 
 <body <?php body_class(); ?>>
-			<div class="row main">
+		

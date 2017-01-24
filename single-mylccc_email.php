@@ -10,6 +10,7 @@
  */
 
 get_header(); ?>
+	<div class="row main">
 <div class="small-12 medium-12 large-12 columns contentdiv">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

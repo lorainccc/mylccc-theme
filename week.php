@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+	<div class="row main">
 <div class="small-12 medium-12 large-12 columns contentdiv">
 			<div class="small-12 medium-12 large-12 columns pagediv">
 				<div id="primary" class="content-area">
@@ -48,15 +49,16 @@ $dateArray = array();
 ?>
 <?php 	$lastdate =  $year.'-'.$month.'-'.$day; ?>
 			<a href='calendar/?d=<?php echo $lastdate;?>'><-- Back To The Calendar</a><br />	
-<ul class="small-block-grid-1 small-block-grid-3 large-block-grid-3">		
-						<li>
+<div class="small-up-1 medium-up-3 large-up-3">		
+					<div class="column column-block">
 							<?php
 							 do_action( 'lccc_prev_week',$year, $month, $day);
 						?>
-	</li>
-							<li><div style='display:inline-block;'>&nbsp;</div><div style='text-align:center;'><a href="/week">Today</a></div></li>
-						<li><?php do_action( 'lccc_next_week',$year, $month, $day); ?></li>
-</ul>
+	</div>
+						<div class="column column-block"><div style='display:inline-block;'>&nbsp;</div><div style='text-align:center;'><a href="week">Today</a></div></div>
+	
+						<div class="column column-block"><?php do_action( 'lccc_next_week',$year, $month, $day); ?></div>
+</div>
 <?php
 
 //Code for calling functions to generate page

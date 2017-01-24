@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+	<div class="row main">
 <?php
 $today = getdate();
 				$currentDay = $today['mday'];

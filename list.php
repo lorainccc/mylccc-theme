@@ -8,6 +8,7 @@
  */
 get_header();
 ?>
+	<div class="row main">
 <div class="small-12 medium-12 large-12 columns contentdiv">
 			<div class="small-12 medium-12 large-12 columns pagediv">
 				<div id="primary" class="content-area">

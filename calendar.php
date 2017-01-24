@@ -40,13 +40,13 @@ $myvar = get_query_var('d');
 $monthString = array();
 $dateArray = array();
 ?>
-						<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">
-<li><?php do_action( 'lccc_previous_month',$month, $year, $monthString); ?></li>
+						<div class="row small-up-1 medium-up-3 large-up-3">
+<div class="column column-block"><?php do_action( 'lccc_previous_month',$month, $year, $monthString); ?></div>
 <?php 	$lastdate =  $year.'-'.$month.'-'.$day; ?>							
-<li style="text-align: center;"><a href="week/?d=<?php echo $lastdate;?>">Weekly View</a></li>
-	<li><?php do_action( 'lccc_next_month',$month, $year, $monthString); ?>
- </li>
-</ul>	
+<div class="column column-block" style="text-align: center;"><a href="week/?d=<?php echo $lastdate;?>">Weekly View</a></div>
+	<div class="column column-block"><?php do_action( 'lccc_next_month',$month, $year, $monthString); ?>
+ </div>
+</div>	
 					<?php
 					$args = "$year-$month-$day";
 					do_action('lccc_calendar', $day, $month, $year);

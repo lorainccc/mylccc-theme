@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+	<div class="row main">
 <div class="small-12 medium-12 large-12 columns contentdiv">
 	<div class="small-12 medium-12 large-12 columns nopadding">
 		<div id="primary" class="content-area">
@@ -32,14 +33,14 @@ get_header(); ?>
      $event_day =$d;
    }
 			
-			
 			?>	
 			<div class="small-12 medium-12 large-12 columns">
-				<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
-				<li><a href="/calendar/?d=<?php echo $myvar;?>"><--- Back to Calendar</a></li>
-				<li class="show-for-large-up">&nbsp;</li>
-				<li style="text-align:right;"><a href="/week/?d=<?php echo $myvar; ?>">Back To Weekly View</a></li>	
-				</ul>
+				<div class="small-up-1 medium-up-2 large-up-3">
+				<div class="column column-block"><a href="calendar/?d=<?php echo $myvar;?>"><--- Back to Calendar</a></div>
+				<div class="column column-block show-for-large-up"> &nbsp;</div>
+				<div class="column column-block" style="text-align:right;">	
+				<a href="week/?d=<?php echo $myvar; ?>">Back To Weekly View</a></div>	
+				</div>
 			<h1><?php echo $event_month.' '.$event_day.', '.$event_year.' Events'; ?></h1>
 			</div>		
 				<div class="small-12 medium-12 large-12 columns pagediv">
@@ -50,48 +51,62 @@ get_header(); ?>
 						?>
 			</div>
 			<div class="small-12 medium-12 large-12 columns events-list">	
-						
-										<?php 
-												$args = array(
-														'post_type' => 'lccc_event',
-														'meta_query' => array(
-																			array(
-																						'key' => 'event_start_date',
-																						'value' => $myvar,
-																						'comapre' > 'BETWEEN',
-																						'type' => 'DATE'
-																			)
-															),
-														'orderby' => 'meta_value',
-    										'meta_key' => 'event_start_time' ,
-														'order'   => 'ASC',
-													);
-												query_posts( $args );
-												// The Query
-											$the_query = new WP_Query( $args );
-												// The Loop
-												if ( $the_query->have_posts() ) {
-																while ( $the_query->have_posts() ) {
-																	?>
-																	<div class="small-12 medium-12 large-12 columns todays-event">
-																	<?php	
-																			$the_query->the_post();
-																			$eventdate = event_meta_box_get_meta('event_start_date');													
-																			$date=strtotime($eventdate);
-																			$today_event_month=date("m",$date);
-																			$today_event_day=date("j",$date);
-																			$time=date("h:i A",$date);
-																			?><?php the_title('<h2 class="event-title">','</h2>');?><?php
-																			echo '<p class="event-time">'.$time.'</p>';
-																			the_content('<p>','</p>');
-																	?>
-																	</div>	
-																	<?php
-																	}
-												} else {
-																	// no posts found
-												}
-											?>
+						<?php 
+				$lcccevents = '';
+				$stockerevents = '';
+				$athleticevents = '';
+	
+			//Grab posts (endpoints)
+  	$domain = 'http://' . $_SERVER['SERVER_NAME'];
+
+	   //?filter[posts_per_page]='.$displaynumber.'
+			$lcccevents = new Endpoint( $domain . '/mylccc/wp-json/wp/v2/lccc_events?filter[posts_per_page]=-1' );
+			$athleticevents = new Endpoint( $domain . '/athletics/wp-json/wp/v2/lccc_events?per_page=100' );
+			$stockerevents = new Endpoint( 'http://sites.lorainccc.edu/stocker/wp-json/wp/v2/lccc_events?filter[posts_per_page]=-1' );
+	
+		//Create instance
+	$multi = new MultiBlog( 1 );
+	
+		//Add endpoints to instance
+	if ( $lcccacademicevents != ''){
+		$multi->add_endpoint ( $lcccacademicevents );
+	};
+	if ( $lcccevents != ''){
+		$multi->add_endpoint ( $lcccevents );
+	};
+	if ( $athleticevents != ''){
+		$multi->add_endpoint ( $athleticevents );
+	};
+
+	if ( $stockerevents != ''){
+		$multi->add_endpoint ( $stockerevents );
+	};
+	//Fetch Endpoints
+	$posts = $multi->get_posts();
+	if(empty($posts)){
+		echo 'No Posts Found!';
+	}
+	
+usort( $posts, function ( $a, $b) {
+return strtotime( $a->event_start_date ) - strtotime( $b->event_start_date );
+});
+						if($posts !=''){	
+					foreach ( $posts as $post ){
+									if(strtotime($post->event_start_date) == strtotime($myvar)){
+											echo '<div class="small-12 medium-12 large-12 columns">';
+											echo '<a href="'.$post->link.'"><h2 class="event-title">'.$post->title->rendered.'</h2></a>';
+											echo '<p>'.$post->excerpt->rendered.'</p>';
+											if( $post->excerpt->rendered != ''){
+												echo '<a class="button" href="'.$post->link.'">Learn More</a>';
+											}
+											echo '</div>';
+											echo	'<div class="column row event-list-row">';
+            			echo '<hr>';
+           echo '</div>'; 
+									}
+						}
+				}
+						?>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
